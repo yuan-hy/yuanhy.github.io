@@ -303,7 +303,120 @@
 </ul>
 </li>
 </ul>
-<h2 id="下载-Hexo"><a href="#下载-Hexo" class="headerlink" title="下载 Hexo"></a>下载 Hexo</h2>
+<h2 id="下载安装-Hexo"><a href="#下载安装-Hexo" class="headerlink" title="下载安装 Hexo"></a>下载安装 Hexo</h2><h3 id="当前的环境要求"><a href="#当前的环境要求" class="headerlink" title="当前的环境要求"></a>当前的环境要求</h3><ul>
+<li><p>安装 Hexo 非常简单，只需要事先准备好以下几点：</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="http://nodejs.org/">Node.js</a> (Node环境至少 Node.js 10.13, recommends 12.0 or higher)</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://git-scm.com/">Git</a></p>
+<p>如果以上环境都安装配置好了，可以直接忽略以下安装 Git 和 安装 Node , 跳到<code>安装 Hexo</code> 部分</p>
+</li>
+</ul>
+</li>
+<li><p>安装 Git</p>
+<ul>
+<li><p>Windows：下载并安装<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">git</a>。</p>
+</li>
+<li><p>Mac：使用<a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a>、<a target="_blank" rel="noopener" href="http://www.macports.org/">MacPorts</a>或<a target="_blank" rel="noopener" href="http://sourceforge.net/projects/git-osx-installer/">installer 安装</a>。</p>
+<ul>
+<li><p><strong>对于 Mac 用户</strong></p>
+<p>编译时可能会遇到一些问题。请先从 App Store 安装 Xcode。Xcode安装完成后，打开Xcode，进入<strong>Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install</strong>安装命令行工具。</p>
+</li>
+</ul>
+</li>
+<li><p>Linux（Ubuntu、Debian）： <code>sudo apt-get install git-core</code></p>
+</li>
+<li><p>Linux（Fedora、Red Hat、CentOS）： <code>sudo yum install git-core</code></p>
+</li>
+</ul>
+</li>
+<li><p>安装 Node</p>
+<p>Node.js为大多数平台提供<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">官方安装程序</a>。</p>
+<p>其他安装方法：</p>
+<ul>
+<li>Windows：使用<a target="_blank" rel="noopener" href="https://github.com/jasongin/nvs/">nvs</a>（推荐）或<a target="_blank" rel="noopener" href="https://github.com/nvm-sh/nvm">nvm 安装</a>。</li>
+<li>Mac：使用<a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a>或<a target="_blank" rel="noopener" href="http://www.macports.org/">MacPorts</a>安装。</li>
+<li>Linux（基于 DEB/RPM）：使用<a target="_blank" rel="noopener" href="https://github.com/nodesource/distributions">NodeSource</a>安装它。</li>
+<li>其他：通过相应的包管理器安装。请参阅Node.js 提供<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/package-manager/">的指南</a>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><ul>
+<li><p>打开 Git 的 bash 环境</p>
+<p>上面我们已经安装了 Git ，那么 Git 安装目录下有一个 git-bash.exe,双击打开（git 可以配置在当前目录下下打开，没必要到安装木下打开，关于 Git 的使用自行了解）</p>
+</li>
+<li><p>在磁盘中创建一个文件夹，以我的为例,D 盘下的data 目录下创建一个 fluidBlog ,因为等一下使用 fluid 主题，所以以这个命名文件夹，名字自定义无限制,如下所示</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">18816@DESKTOP-H4L2AMQ MINGW64 /d/data/fluidBlog<br>$ <span class="hljs-built_in">pwd</span><br>/d/data/fluidBlog<br><br>18816@DESKTOP-H4L2AMQ MINGW64 /d/data/fluidBlog<br>$<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>在 fluidBlog目录下执行命令安装 Hexo : npm install -g hexo-cli</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">18816@DESKTOP-H4L2AMQ MINGW64 /d/data/fluidBlog<br>$ npm install -g hexo-cli<br>C:\Users\18816\AppData\Roaming\npm\hexo -&gt; C:\Users\18816\AppData\Roaming\npm\node_modules\hexo-cli\bin\hexo<br>npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.2 (node_modules\hexo-cli\node_modules\chokidar\node_modules\fsevents):<br>npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="hljs-keyword">for</span> fsevents@2.3.2: wanted &#123;<span class="hljs-string">&quot;os&quot;</span>:<span class="hljs-string">&quot;darwin&quot;</span>,<span class="hljs-string">&quot;arch&quot;</span>:<span class="hljs-string">&quot;any&quot;</span>&#125; (current: &#123;<span class="hljs-string">&quot;os&quot;</span>:<span class="hljs-string">&quot;win32&quot;</span>,<span class="hljs-string">&quot;arch&quot;</span>:<span class="hljs-string">&quot;x64&quot;</span>&#125;)<br><br>+ hexo-cli@4.3.0<br>updated 1 package <span class="hljs-keyword">in</span> 9.945s<br></code></pre></td></tr></table></figure></li>
+<li><p>安装 Hexo 后，运行以下命令在 fluidBlog 中初始化 Hexo 文件夹</p>
+<p>$ hexo init &lt;文件夹&gt;<br>$ cd &lt;文件夹&gt;<br>$ npm install</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">18816@DESKTOP-H4L2AMQ MINGW64 /d/data/fluidBlog<br>$ hexo init blog<br>INFO  Cloning hexo-starter https://github.com/hexojs/hexo-starter.git<br>fatal: unable to access <span class="hljs-string">&#x27;https://github.com/hexojs/hexo-starter.git/&#x27;</span>: Unknown SSL protocol error <span class="hljs-keyword">in</span> connection to github.com:443<br>WARN  git <span class="hljs-built_in">clone</span> failed. Copying data instead<br>INFO  Install dependencies<br><span class="hljs-string">&#x27;npm&#x27;</span> ▒▒▒▒▒ڲ▒▒▒▒ⲿ▒▒▒Ҳ▒▒▒ǿ▒▒▒▒еĳ▒▒▒<br>▒▒▒▒▒▒▒▒▒ļ▒▒▒<br>WARN  Failed to install dependencies. Please run <span class="hljs-string">&#x27;npm install&#x27;</span> <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;D:\data\fluidBlog\blog&quot;</span> folder.<br><br></code></pre></td></tr></table></figure>
+
+<p><code>注意：在这里显示失败，Please run &#39;npm install&#39; in &quot;D:\data\fluidBlog\blog&quot; folder.</code>需要进去 blog 文件夹执行 npm install </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">18816@DESKTOP-H4L2AMQ MINGW64 /d/data/fluidBlog/blog<br>$ npm install<br>npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url<span class="hljs-comment">#deprecated</span><br>npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix<span class="hljs-comment">#deprecated</span><br><br>&gt; ejs@2.7.4 postinstall D:\data\fluidBlog\blog\node_modules\ejs<br>&gt; node ./postinstall.js<br><br><span class="hljs-string">&#x27;node&#x27;</span> ▒▒▒▒▒ڲ▒▒▒▒ⲿ▒▒▒Ҳ▒▒▒ǿ▒▒▒▒еĳ▒▒▒<br>▒▒▒▒▒▒▒▒▒ļ▒▒▒<br>npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.2 (node_modules\chokidar\node_modules\fsevents):<br>npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="hljs-keyword">for</span> fsevents@2.3.2: wanted &#123;<span class="hljs-string">&quot;os&quot;</span>:<span class="hljs-string">&quot;darwin&quot;</span>,<span class="hljs-string">&quot;arch&quot;</span>:<span class="hljs-string">&quot;any&quot;</span>&#125; (current: &#123;<span class="hljs-string">&quot;os&quot;</span>:<span class="hljs-string">&quot;win32&quot;</span>,<span class="hljs-string">&quot;arch&quot;</span>:<span class="hljs-string">&quot;x64&quot;</span>&#125;)<br><br>npm ERR! code ELIFECYCLE<br>npm ERR! errno 1<br>npm ERR! ejs@2.7.4 postinstall: `node ./postinstall.js`<br>npm ERR! Exit status 1<br>npm ERR!<br>npm ERR! Failed at the ejs@2.7.4 postinstall script.<br>npm ERR! This is probably not a problem with npm. There is likely additional logging output above.<br><br>npm ERR! A complete <span class="hljs-built_in">log</span> of this run can be found <span class="hljs-keyword">in</span>:<br>npm ERR!     C:\Users\18816\AppData\Roaming\npm-cache\_logs\2021-09-12T10_09_04_955Z-debug.log<br></code></pre></td></tr></table></figure>
+
+<p>但还是报错了，无法安装 <a href="mailto:&#x65;&#106;&#115;&#x40;&#x32;&#x2e;&#x37;&#46;&#x34;">&#x65;&#106;&#115;&#x40;&#x32;&#x2e;&#x37;&#46;&#x34;</a>(因为我的环境被搞得乱七八糟，暂时找不到原因，也有可能是因为镜像是外国的，有点慢的原因，导致失败)</p>
+<p><strong>解决如下</strong></p>
+<p>选用 cnpm 和使用淘宝镜像</p>
+<ul>
+<li><p>查看注册的镜像，只有官方的镜像</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">18816@DESKTOP-H4L2AMQ MINGW64 /d/data/fluidBlog/blog<br>$ npm config get registry<br>https://registry.npmjs.org/<br></code></pre></td></tr></table></figure></li>
+<li><p>配置淘宝镜像</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 配置长期使用</span><br>npm config <span class="hljs-built_in">set</span> registry https://registry.npm.taobao.org<br><br>测试结果<br>18816@DESKTOP-H4L2AMQ MINGW64 /d/data/fluidBlog/blog<br>$ npm config get registry<br>https://registry.npm.taobao.org/<br><br><br><span class="hljs-comment"># 临时使用，这用法可同时安装 cnpm</span><br>npm install -g cnpm - -registry=https://registry.npm.taobao.org<br></code></pre></td></tr></table></figure></li>
+<li><p>安装 cnpm 命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 配置长期使用情况下安装 cnpm</span><br>18816@DESKTOP-H4L2AMQ MINGW64 /d/data/fluidBlog/blog<br>$ npm install -g cnpm<br>npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142<br>npm WARN deprecated har-validator@5.1.5: this library is no longer supported<br>C:\Users\18816\AppData\Roaming\npm\cnpm -&gt; C:\Users\18816\AppData\Roaming\npm\node_modules\cnpm\bin\cnpm<br>+ cnpm@7.0.0<br>updated 1 package <span class="hljs-keyword">in</span> 32.179s<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>在 blog 目录下执行 cnpm install</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ cnpm install<br><span class="hljs-string">&#x27;npm&#x27;</span> ▒▒▒▒▒ڲ▒▒▒▒ⲿ▒▒▒Ҳ▒▒▒ǿ▒▒▒▒еĳ▒▒▒<br>▒▒▒▒▒▒▒▒▒ļ▒▒▒<br><span class="hljs-string">&#x27;npm&#x27;</span> ▒▒▒▒▒ڲ▒▒▒▒ⲿ▒▒▒Ҳ▒▒▒ǿ▒▒▒▒еĳ▒▒▒<br>▒▒▒▒▒▒▒▒▒ļ▒▒▒<br><span class="hljs-string">&#x27;npm&#x27;</span> ▒▒▒▒▒ڲ▒▒▒▒ⲿ▒▒▒Ҳ▒▒▒ǿ▒▒▒▒еĳ▒▒▒<br>▒▒▒▒▒▒▒▒▒ļ▒▒▒<br>-<br>√ Installed 10 packages<br>√ Linked 2 latest versions<br>[1/1] scripts.postinstall hexo-renderer-ejs@1.0.0 › ejs@^2.6.1 run <span class="hljs-string">&quot;node ./postinstall.js&quot;</span>, root: <span class="hljs-string">&quot;D:\\data\\fluidBlog\\blog\\node_modules\\_ejs@2.7.4@ejs&quot;</span><br><span class="hljs-string">&#x27;node&#x27;</span> ▒▒▒▒▒ڲ▒▒▒▒ⲿ▒▒▒Ҳ▒▒▒ǿ▒▒▒▒еĳ▒▒▒<br>▒▒▒▒▒▒▒▒▒ļ▒▒▒<br>[npminstall:runscript:error] hexo-renderer-ejs@1.0.0 › ejs@^2.6.1 scripts.postinstall run <span class="hljs-string">&quot;node ./postinstall.js&quot;</span> error: Error [RunScriptError]: Run <span class="hljs-string">&quot;C:\WINDOWS\system32\cmd.exe /d /s /c node ./postinstall.js&quot;</span> error, <span class="hljs-built_in">exit</span> code 1<br>    at ChildProcess.&lt;anonymous&gt; (C:\Users\18816\AppData\Roaming\npm\node_modules\cnpm\node_modules\runscript\index.js:96:21)<br>    at ChildProcess.emit (events.js:400:28)<br>    at maybeClose (internal/child_process.js:1055:16)<br>    at Process.ChildProcess._handle.onexit (internal/child_process.js:288:5) &#123;<br>  stdio: [Object],<br>  exitcode: 1<br>&#125;<br>× Install fail! RunScriptError: post install error, please remove node_modules before retry!<br>Run <span class="hljs-string">&quot;C:\WINDOWS\system32\cmd.exe /d /s /c node ./postinstall.js&quot;</span> error, <span class="hljs-built_in">exit</span> code 1<br>RunScriptError: Run <span class="hljs-string">&quot;C:\WINDOWS\system32\cmd.exe /d /s /c node ./postinstall.js&quot;</span> error, <span class="hljs-built_in">exit</span> code 1<br>    at ChildProcess.&lt;anonymous&gt; (C:\Users\18816\AppData\Roaming\npm\node_modules\cnpm\node_modules\runscript\index.js:96:21)<br>    at ChildProcess.emit (events.js:400:28)<br>    at maybeClose (internal/child_process.js:1055:16)<br>    at Process.ChildProcess._handle.onexit (internal/child_process.js:288:5)<br>npminstall version: 5.0.2<br>npminstall args: D:\soft\node\node-install\node.exe C:\Users\18816\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\bin\install.js --fix-bug-versions --china --userconfig=C:\Users\18816\.cnpmrc --disturl=https://npm.taobao.org/mirrors/node --registry=https://registry.nlark.com<br></code></pre></td></tr></table></figure>
+
+<p><strong>即使报错，也没关系</strong></p>
+</li>
+</ul>
+<h2 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h2><ul>
+<li>部署前生成静态文件，命令 ：hexo g<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">18816@DESKTOP-H4L2AMQ MINGW64 /d/data/fluidBlog/blog<br>$ hexo g<br>INFO  Validating config<br>INFO  Start processing<br>INFO  Files loaded <span class="hljs-keyword">in</span> 131 ms<br>(node:18792) Warning: Accessing non-existent property <span class="hljs-string">&#x27;lineno&#x27;</span> of module expo inside circular dependency<br>(Use `node --trace-warnings ...` to show <span class="hljs-built_in">where</span> the warning was created)<br>(node:18792) Warning: Accessing non-existent property <span class="hljs-string">&#x27;column&#x27;</span> of module expo inside circular dependency<br>(node:18792) Warning: Accessing non-existent property <span class="hljs-string">&#x27;filename&#x27;</span> of module exts inside circular dependency<br>(node:18792) Warning: Accessing non-existent property <span class="hljs-string">&#x27;lineno&#x27;</span> of module expo inside circular dependency<br>(node:18792) Warning: Accessing non-existent property <span class="hljs-string">&#x27;column&#x27;</span> of module expo inside circular dependency<br>(node:18792) Warning: Accessing non-existent property <span class="hljs-string">&#x27;filename&#x27;</span> of module exts inside circular dependency<br>INFO  Generated: archives/index.html<br>INFO  Generated: archives/2021/index.html<br>INFO  Generated: fancybox/blank.gif<br>INFO  Generated: fancybox/helpers/fancybox_buttons.png<br>INFO  Generated: index.html<br>INFO  Generated: fancybox/fancybox_loading.gif<br>INFO  Generated: fancybox/fancybox_loading@2x.gif<br>INFO  Generated: fancybox/fancybox_overlay.png<br>INFO  Generated: fancybox/fancybox_sprite.png<br>INFO  Generated: fancybox/fancybox_sprite@2x.png<br>INFO  Generated: js/script.js<br>INFO  Generated: archives/2021/09/index.html<br>INFO  Generated: fancybox/jquery.fancybox.css<br>INFO  Generated: fancybox/helpers/jquery.fancybox-buttons.css<br>INFO  Generated: fancybox/helpers/jquery.fancybox-buttons.js<br>INFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.css<br>INFO  Generated: fancybox/helpers/jquery.fancybox-media.js<br>INFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.js<br>INFO  Generated: css/style.css<br>INFO  Generated: 2021/09/12/hello-world/index.html<br>INFO  Generated: css/fonts/FontAwesome.otf<br>INFO  Generated: css/fonts/fontawesome-webfont.eot<br>INFO  Generated: css/fonts/fontawesome-webfont.woff<br>INFO  Generated: fancybox/jquery.fancybox.pack.js<br>INFO  Generated: fancybox/jquery.fancybox.js<br>INFO  Generated: css/fonts/fontawesome-webfont.ttf<br>INFO  Generated: css/images/banner.jpg<br>INFO  Generated: css/fonts/fontawesome-webfont.svg<br>INFO  28 files generated <span class="hljs-keyword">in</span> 464 ms<br></code></pre></td></tr></table></figure></li>
+<li>启动服务:<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> ，命令：hexo s <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">18816@DESKTOP-H4L2AMQ MINGW64 /d/data/fluidBlog/blog<br>$ hexo s<br>INFO  Validating config<br>INFO  Start processing<br>INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.<br>(node:9556) Warning: Accessing non-existent property <span class="hljs-string">&#x27;lineno&#x27;</span> of module exporinside circular dependency<br>(Use `node --trace-warnings ...` to show <span class="hljs-built_in">where</span> the warning was created)<br>(node:9556) Warning: Accessing non-existent property <span class="hljs-string">&#x27;column&#x27;</span> of module exporinside circular dependency<br>(node:9556) Warning: Accessing non-existent property <span class="hljs-string">&#x27;filename&#x27;</span> of module exps inside circular dependency<br>(node:9556) Warning: Accessing non-existent property <span class="hljs-string">&#x27;lineno&#x27;</span> of module exporinside circular dependency<br>(node:9556) Warning: Accessing non-existent property <span class="hljs-string">&#x27;column&#x27;</span> of module exporinside circular dependency<br>(node:9556) Warning: Accessing non-existent property <span class="hljs-string">&#x27;filename&#x27;</span> of module exps inside circular dependency<br></code></pre></td></tr></table></figure></li>
+<li>在浏览器打开 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> ,可直接访问 Hexo 原始主题的博客</li>
+</ul>
+<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><blockquote>
+<p>因为 Hexo 提供更多更好看功能更齐全的主题，所以更换新的主题 主题列表网址：<a target="_blank" rel="noopener" href="https://hexo.io/themes/%EF%BC%8C%E4%B8%8D%E5%90%8C%E7%9A%84%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%8D%A2%E6%96%B9%E6%B3%95%E5%A4%A7%E5%90%8C%E5%B0%8F%E5%BC%82">https://hexo.io/themes/，不同的主题更换方法大同小异</a></p>
+<p>以 <strong><code>fluid</code></strong> 主题为例</p>
+</blockquote>
+<p>fluid 主题的 github 地址 ：<a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">https://github.com/fluid-dev/hexo-theme-fluid</a></p>
+<ul>
+<li><p>打开 <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">https://github.com/fluid-dev/hexo-theme-fluid</a></p>
+</li>
+<li><p>获取主题最新版本</p>
+<ul>
+<li><p>方式一：</p>
+<p>Hexo 5.0.0 版本以上，推荐通过 npm 直接安装，进入博客目录执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">npm install --save hexo-theme-fluid<br></code></pre></td></tr></table></figure>
+
+<p>然后在博客目录 blog 下创建 <code>_config.fluid.yml</code>，将主题 hexo-theme-fluid 目录下的 <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/_config.yml">_config.yml</a> 内容复制进去。</p>
+<p>查看当前 hexo 版本 命令：hexo version（hexo: 5.4.0）</p>
+</li>
+<li><p>方式二：</p>
+<p>下载 <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid/releases">最新 release 版本</a> 解压到 themes 目录，并将解压出的文件夹重命名为 <code>fluid</code>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/fluid-dev/hexo-theme-fluid.git themes/fluid<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>指定主题</p>
+<ul>
+<li>修改 Hexo 博客 blog 目录中的 <code>_config.yml</code>：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">theme: fluid  <span class="hljs-comment"># 指定主题</span><br><br>language: zh-CN  <span class="hljs-comment"># 指定语言，会影响主题显示的语言，按需修改</span><br></code></pre></td></tr></table></figure></li>
+<li><p>创建「关于页」</p>
+<p>首次使用主题的「关于页」需要手动创建：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">hexo new page about<br></code></pre></td></tr></table></figure></li>
+<li><p>创建成功后，编辑博客目录 blog下 <code>/source/about/index.md</code>，添加 <code>layout</code> 属性。(可选，因为会自动生成)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">---<br>title: about<br>date: 2020-02-23 19:20:33<br>layout: about<br>---<br><br>这里写关于页的正文，支持 Markdown, HTML<br></code></pre></td></tr></table></figure></li>
+</ul>
+
     </div>
 </div>
 <style>
